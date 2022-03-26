@@ -4,7 +4,6 @@ import base.BasePage;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class LoginPage extends BasePage {
     public LoginPage(WebDriver driver) {
@@ -14,9 +13,8 @@ public class LoginPage extends BasePage {
     private final By usernameLocator = By.id("user-name");
     private final By passwordLocator = By.id("password");
     private final By loginButtonLocator = By.id("login-button");
-    private final By checkStringLocator = By.className("product_label");
-
-    private String checkProductString;
+    private final By checkProductStringLocator = By.className("product_label");
+    private final By errorStringLocator = By.xpath("//h3[@data-test='error']");
 
 
     public void enterUsername(String username) throws InterruptedException {
@@ -39,10 +37,14 @@ public class LoginPage extends BasePage {
         Thread.sleep(3000);
     }
 
-    public String checkString(){
-        WebElement checkString = driver.findElement(checkStringLocator);
-        checkProductString = checkString.getText();
-        return checkProductString;
+    public String checkProductString(){
+        WebElement checkString = driver.findElement(checkProductStringLocator);
+        return checkString.getText();
+    }
+
+    public String wrongLogin(){
+        WebElement errorString = driver.findElement(errorStringLocator);
+        return errorString.getText();
     }
 
 

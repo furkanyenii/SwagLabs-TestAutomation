@@ -12,8 +12,8 @@ import org.testng.annotations.BeforeMethod;
 public class BaseTest {
 
     protected WebDriver driver;
-    String browser = System.getProperty("browser");
-
+    //String browser = System.getProperty("browser");
+    String browser = "chrome";
     @BeforeMethod
     public void setUp(){
         switch (browser){
