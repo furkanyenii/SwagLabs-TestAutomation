@@ -1,6 +1,8 @@
 # SwagLabs-TestAutomation
 ![swag-labs](https://user-images.githubusercontent.com/37777649/160365380-de6d0f8e-910e-4a07-8751-bb54b4353e01.png)
 
+### Test Website : [SwagLabs](https://www.saucedemo.com/v1/ "SwagLabs")
+
 #### Requirements : 
 
 * First of all, if you want to work on this project, you need to have Java 11. In addition, Selenium, Testng and webdrivermanager libraries were used. 
