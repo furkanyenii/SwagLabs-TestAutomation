@@ -6,7 +6,6 @@ import org.testng.annotations.Test;
 import pages.LoginPage;
 import utils.Constants;
 
-
 public class LoginPageTest extends BaseTest {
 
     @Test
@@ -21,7 +20,6 @@ public class LoginPageTest extends BaseTest {
         Assert.assertEquals(loginPage.checkProductString(),Constants.EXPECTED_SUCCESS_LOGIN);
     }
 
-
     @Test
     public void unsuccessfulLogin_Test() throws InterruptedException {
         final LoginPage loginPage1 = new LoginPage(driver);
@@ -33,6 +31,4 @@ public class LoginPageTest extends BaseTest {
         loginPage1.clickLoginButton();
         Assert.assertEquals(loginPage1.wrongLogin(),Constants.EXPECTED_UNSUCCESS_LOGIN);
     }
-
-
 }
