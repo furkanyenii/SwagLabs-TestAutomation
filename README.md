@@ -11,6 +11,11 @@
 
 * First of all, we have 3 different scenarios. But these scenarios may increase over time and new test cases may be added. 
 
-##### Scenario 1: Successfully logging into the system with the username and password that SwagLabs has defined for us for testing purposes. 
-##### Scenario 2: Login to the system with the correct user name and wrong password and check the error that the system gives. 
-##### Scenario 3: Selecting a product from the Products page and adding the product to the shopping cart and completing the shopping process. 
+* ##### Scenario 1: Successfully logging into the system with the username and password that SwagLabs has defined for us for testing purposes. 
+* ##### Scenario 2: Login to the system with the correct user name and wrong password and check the error that the system gives. 
+* ##### Scenario 3: Selecting a product from the Products page and adding the product to the shopping cart and completing the shopping process. 
+
+
+#### Information : If you will run the project with maven, you can specify the browser name you want with the parameter and run it. But before that, you need to make the necessary changes from the BaseTest page.
+
+##### Example command: ```mvn -Dbrowser="chrome" test ```
